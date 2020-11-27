@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+
+            <div class="left-nav">
+                <div class="mobile">
+                    <img src="./images/Hamburger_menu.png" alt="" class="hamburger-menu">
+                    <ul class="mobile-menu">
+                        <li class="mobile-menu__links">Dashboard</li>
+                        <li class="mobile-menu__links">Pull requests</li>
+                        <li class="mobile-menu__links">Issues</li>
+                        <li class="mobile-menu__links">Marketplace</li>
+                        <li class="mobile-menu__links">Explore</li>
+                        <li class="mobile-menu__links">Settings</li>
+                        <li class="mobile-menu__links">Aqueousolution</li>
+                        <li class="mobile-menu__links">Sign out</li>
+                    </ul>
+                </div>
+                
+                <img src="./images/logo.svg" alt="logo" class="logo">
+                <div class="searchbox">
+                    <input placeholder="search or jump to..." type="text" class="left-nav__search">
+                    <img src="./images/search-key-slash.svg" alt="searchkey" class="searchkey">
+                </div>
+                
+                <ul class="left-nav__links">
+                    <li class="left-nav__link"><a href="#">Pull requests</a> </li>
+                    <li class="left-nav__link"><a href="#">Issues</a></li>
+                    <li class="left-nav__link"><a href="#">Codespaces</a></li>
+                    <li class="left-nav__link"><a href="#">Marketplace</a></li>
+                    <li class="left-nav__link"><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <img src="./images/notification.svg" alt="notifications" class="right-nav__icon ">
+                <div class="notification"></div>
+                <div class="flex">
+                    <img src="./images/plus.svg" alt="createnew" class="right-nav__icon create-btn">
+                    <img class="arrow-down create-btn" src="./images/down-arrow.svg">
+                    <div class="dropdown" id="create-new">
+                        <ul class="dropdown-list">
+                            <li class="dropdown-listitems">New repository</li>
+                            <li class="dropdown-listitems">Import repository</li>
+                            <li class="dropdown-listitems">New gist</li>
+                            <li class="dropdown-listitems">New organization</li>
+                            <li class="dropdown-listitems">New project</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex">
+                    <img src="" alt="profile" class="right-nav__avatar avatar profile-btn">
+                    <img class="arrow-down profile-btn" src="./images/down-arrow.svg">
+                    <div class="dropdown" id="profile">
+                        <p>Signed in as</p>
+                        <b>AqueousSolution</b>
+                        <div class="line dropdown-line"></div>
+                        <button class="set-status_dropdown">Set status</button>
+                        <div class="line dropdown-line"></div>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-listitems">Your profile</li>
+                            <li class="dropdown-listitems">Your repositories</li>
+                            <li class="dropdown-listitems">Your projects</li>
+                            <li class="dropdown-listitems">Your stars</li>
+                            <li class="dropdown-listitems">Your gists</li>
+                        </ul>
+                        <div class="line dropdown-line"></div>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-listitems">Upgrade</li>
+                            <li class="dropdown-listitems">Feature preview</li>
+                            <li class="dropdown-listitems">Help</li>
+                            <li class="dropdown-listitems">Settings</li>
+                            <li class="dropdown-listitems">Sign out</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+
+        <ul class="secondary-nav">
+            <li class="secondary-nav__item ">
+                <img src="./images/overview.svg" alt="overview" class="nav-icon">
+                <p>Overview</p>
+            </li>
+            <li class="secondary-nav__item active">
+                <img src="./images/repo.svg" alt="repositories" class="nav-icon active">
+                <p class="repo-tab">Repositories <span class="number"></span></p>
+            </li>
+            <li class="secondary-nav__item">
+                <img src="./images/projects.svg" alt="projects" class="nav-icon">
+                <p>Projects</p>
+            </li>
+            <li class="secondary-nav__item">
+                <img src="./images/packages.svg" alt="packages" class="nav-icon">
+                <p>Packages</p>
+            </li>
+        </ul>
+
+        <section class="repositories">
+            <div class="side-section">
+                <div class="avatar-holder">
+                    <img src="./images/avatar.jpg" alt="avatar" class="side-section__avatar avatar">
+                    <button class="smiley"><img src="./images/smiley-16.svg" alt="smiley" class="smiley-icon"></button> 
+                    <span class="set-status"><img src="./images/hover-smiley.svg" alt="smiley" class="hover-smiley">Set status</span>
+                </div>
+                <div class="avatar-info">
+                    <h1 class="side-section__name">Idahosa Akioya</h1>
+                    <p class="side-section__username">Aqueousolution</p>
+                    <p class="side-section__bio">Bad ass developer building magic</p>
+                </div>
+
+            </div>
+            <div class="main-section">
+                <input type="text" placeholder="Find a repository..." class="main-section__search">
+                <div class="line"></div>
+                <p class="main-section__result">20 results for public repositories</p>
+                
+                <div class="main-section__repolist">
+
+                    
+                </div>
+                
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+        <script type='module' src="index.js"></script>
+    </body>
+</html>
