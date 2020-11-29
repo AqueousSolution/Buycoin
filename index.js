@@ -15,7 +15,35 @@ const number = document.querySelector(".number");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const repoList = document.querySelector(".main-section__repolist");
+const navbar = document.querySelector("#navbar");
+const secondaryNavbar = document.querySelector(".secondary-nav");
+const bigAvatar = document.querySelector(".avatar-holder")
+const stickyInfo = document.querySelector(".sticky-info__hidden")
+const stickyNav = navbar.offsetTop;
+const stickyAvatar = bigAvatar.offsetTop;
+ 
 
+
+window.onscroll = function() {
+  stickIt(stickyInfo,23*stickyAvatar,"sticky-avatar","sticky-info","sticky-info__hidden");
+  stickIt(navbar,stickyNav,"sticky-nav",'secondary-nav-offset','secondary-nav')
+}
+
+
+
+// Add the sticky class to the navbar when it reaches its scroll position. Remove "sticky" when it leaves the scroll position
+function stickIt(elementToStick,offsetPosition,classToAdd,nextClassToAdd,classToRemove) {
+  if (window.pageYOffset >= offsetPosition) {
+    elementToStick.classList.add(classToAdd);
+    elementToStick.classList.remove(classToRemove);
+    elementToStick.classList.add(nextClassToAdd)
+    
+  } else {
+    elementToStick.classList.remove(classToAdd);
+    elementToStick.classList.add(classToRemove)
+    elementToStick.classList.remove(classToAdd);
+  }
+}
 
 
 fetch(`https://api.github.com/graphql`, {

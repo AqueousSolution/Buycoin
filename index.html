@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel=icon href=logo.png sizes="32x32" type="image/png">
         <title>Document</title>
     </head>
     <body>
@@ -12,16 +13,6 @@
             <div class="left-nav">
                 <div class="mobile">
                     <img src="./images/Hamburger_menu.png" alt="" class="hamburger-menu">
-                    <ul class="mobile-menu">
-                        <li class="mobile-menu__links">Dashboard</li>
-                        <li class="mobile-menu__links">Pull requests</li>
-                        <li class="mobile-menu__links">Issues</li>
-                        <li class="mobile-menu__links">Marketplace</li>
-                        <li class="mobile-menu__links">Explore</li>
-                        <li class="mobile-menu__links">Settings</li>
-                        <li class="mobile-menu__links">Aqueousolution</li>
-                        <li class="mobile-menu__links">Sign out</li>
-                    </ul>
                 </div>
                 
                 <img src="./images/logo.svg" alt="logo" class="logo">
@@ -38,6 +29,7 @@
                     <li class="left-nav__link"><a href="#">Explore</a></li>
                 </ul>
             </div>
+
             <div class="right-nav">
                 <img src="./images/notification.svg" alt="notifications" class="right-nav__icon ">
                 <div class="notification"></div>
@@ -83,25 +75,62 @@
                 
             </div>
         </nav>
+        <div class="mobile-menu">
+                <div class="searchbox">
+                    <img src="./images/search-key-slash.svg" alt="searchkey" class="mobile-searchkey">
+                    <input placeholder="search or jump to..." type="text" class="mobile-menu__search">
+                </div>
+                
+           
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__links">Dashboard</li>
+                <li class="mobile-menu__links">Pull requests</li>
+                <li class="mobile-menu__links">Issues</li>
+                <li class="mobile-menu__links">Marketplace</li>
+                <li class="mobile-menu__links">Explore</li>
+                <li class="mobile-menu__links">Settings</li>
+                <li class="mobile-menu__links"><span><img src="./images//avatar.jpg" alt="avatar" class="mobile-menu__avatar"> </span> Aqueousolution</li>
+                <li class="mobile-menu__links"><span><img src="./images//sign-out.svg" alt="avatar" class="mobile-menu__avatar"> </span> Sign out</li>
+            </ul>
+        </div>
 
-        <ul class="secondary-nav">
-            <li class="secondary-nav__item ">
-                <img src="./images/overview.svg" alt="overview" class="nav-icon">
-                <p>Overview</p>
-            </li>
-            <li class="secondary-nav__item active">
-                <img src="./images/repo.svg" alt="repositories" class="nav-icon active">
-                <p class="repo-tab">Repositories <span class="number"></span></p>
-            </li>
-            <li class="secondary-nav__item">
-                <img src="./images/projects.svg" alt="projects" class="nav-icon">
-                <p>Projects</p>
-            </li>
-            <li class="secondary-nav__item">
-                <img src="./images/packages.svg" alt="packages" class="nav-icon">
-                <p>Packages</p>
-            </li>
-        </ul>
+            <div class= "sticky-info__hidden">
+                <img src="./images/avatar.jpg" alt="overview" class=" round">
+                <p class="sticky-username">AqueousSolution</p>
+            </div>
+
+            <ul class="secondary-nav" id="navbar">
+                <li class="secondary-nav__item ">
+                    <a class="secondary-nav__link" href="#">
+                        <img src="./images/overview.svg" alt="overview" class="nav-icon">
+                        <p>Overview</p>
+                    </a>
+
+                </li>
+                <li class="secondary-nav__item active">
+                    <a class="secondary-nav__link" href="#">
+                        <img src="./images/repo.svg" alt="repositories" class="nav-icon active">
+                        <p class="repo-tab">Repositories <span class="number"></span></p>
+                    </a>
+                    
+                </li>
+                <li class="secondary-nav__item">
+                    <a class="secondary-nav__link" href="#">
+                        <img src="./images/projects.svg" alt="projects" class="nav-icon">
+                        <p>Projects</p>
+                    </a>
+
+                </li>
+                <li class="secondary-nav__item">
+                    <a class="secondary-nav__link" href="#">
+                        <img src="./images/packages.svg" alt="packages" class="nav-icon">
+                        <p>Packages</p>
+                    </a>
+
+                </li>
+            </ul>
+       
+       
 
         <section class="repositories">
             
@@ -118,11 +147,35 @@
                 </div>
 
             </div>
+
+            <div class="mobile-profile-info">
+                <button class="setstatus-mobile"><img src="./images/smiley-16.svg" alt="smiley" class="smiley-icon__mobile">Set status</button>
+                <p class="mobile-bio">Bad ass programmer</p>
+            </div>
+
+            <ul class="mobile-secondary-nav">
+                <li class="secondary-nav__item ">
+                    <img src="./images/overview.svg" alt="overview" class="nav-icon">
+                    <p>Overview</p>
+                </li>
+                <li class="secondary-nav__item active">
+                    <img src="./images/repo.svg" alt="repositories" class="nav-icon active">
+                    <p class="repo-tab">Repositories <span class="number">20</span></p>
+                </li>
+                <li class="secondary-nav__item">
+                    <img src="./images/projects.svg" alt="projects" class="nav-icon">
+                    <p>Projects</p>
+                </li>
+                <li class="secondary-nav__item">
+                    <img src="./images/packages.svg" alt="packages" class="nav-icon">
+                    <p>Packages</p>
+                </li>
+            </ul>
             <div class="main-section">
                 
                 <input type="text" placeholder="Find a repository..." class="main-section__search">
                 <div class="line"></div>
-                <p class="main-section__result">20 results for public repositories</p>
+                <p class="main-section__result"><b>20</b> results for <b>public </b>repositories</p>
                 
                 <div class="main-section__repolist">
 
@@ -131,9 +184,6 @@
                 
             </div>
         </section>
-        <footer>
-
-        </footer>
         <script type='module' src="index.js"></script>
     </body>
 </html>
