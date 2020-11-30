@@ -1,4 +1,8 @@
-A Github repository clone using Graphql and vanilla js
+Description
+This project is a re-creation of my GitHub profile "repositories" tab leveraging the GraphQL GitHub API
 
-Project can be viewed live here
-https://www.raba.io/buycoins/
+Tools and Technologies used
+HTML
+CSS
+JavaScript
+GraphQL API Explorer
