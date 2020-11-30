@@ -22,6 +22,7 @@ const repoList = document.querySelector(".main-section__repolist");
 const navbar = document.querySelector("#navbar");
 const secondaryNavbar = document.querySelector(".secondary-nav");
 const bigAvatar = document.querySelector(".avatar-holder")
+const sideAvatar = document.querySelector(".side-section__avatar")
 const stickyInfo = document.querySelector(".sticky-info__hidden")
 const stickyNav = navbar.offsetTop;
 const stickyAvatar = bigAvatar.offsetTop;
@@ -67,7 +68,7 @@ fetch(`https://api.github.com/graphql`, {
 
     let apiResponse = data.data.viewer;
    
-
+    sideAvatar.setAttribute("src", apiResponse.avatarUrl)
     profileImage.setAttribute("src", apiResponse.avatarUrl);
     name.textContent = apiResponse.name;
     userName.textContent = apiResponse.login;
