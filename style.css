@@ -283,7 +283,7 @@ ul.left-nav__links {
   content: "";
   position: absolute;
   top: 220%;
-  left: -10%;
+  left: 0%;
   width: 120%;
   height: 3px;
   background-color: #f9826c;
@@ -532,6 +532,15 @@ a {
 }
 .tool {
   font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1390px) {
+  .repositories {
+    position: relative;
+    display: grid;
+    grid-template-columns: 28% 72%;
+    padding: 1rem 12%;
+  }
 }
 
 @media screen and (max-width: 1150px) {
