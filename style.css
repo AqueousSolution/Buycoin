@@ -496,6 +496,7 @@ button.star {
   width: 100%;
   border-bottom: 1px solid #e1e4e8;
   padding: 1.8rem 0;
+  color: #24292e;
 }
 
 .repo-content:first-child {

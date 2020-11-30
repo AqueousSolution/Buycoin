@@ -1,7 +1,11 @@
 import { query } from "./query.js";
 import { API_KEY } from "./accessToken.js";
 
+
+
 const data = { query };
+
+
 
 const profileBtn = document.querySelector('.profile-btn')
 const createNewBtn = document.querySelector('.create-btn')
@@ -46,6 +50,7 @@ function stickIt(elementToStick,offsetPosition,classToAdd,nextClassToAdd,classTo
 }
 
 
+
 fetch(`https://api.github.com/graphql`, {
   method: "POST",
   headers: {
@@ -56,20 +61,19 @@ fetch(`https://api.github.com/graphql`, {
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log("Success:", data.data.viewer);
+
 
     removeAllChildNodes(repoList);
 
     let apiResponse = data.data.viewer;
-    console.log(apiResponse)
+   
 
     profileImage.setAttribute("src", apiResponse.avatarUrl);
     name.textContent = apiResponse.name;
     userName.textContent = apiResponse.login;
     bio.textContent = apiResponse.bio;
     number.textContent=apiResponse.repositories.nodes.length
-    //stars.textContent = apiResponse.starredRepositories.totalCount;
-    //badgeValue.textContent = apiResponse.repositories.nodes.length;
+
 
     apiResponse.repositories.nodes.forEach(
       (repo) => addChildNode(repo)
@@ -120,7 +124,7 @@ const addChildNode = (repo) => {
   var toolColor = document.createElement('div');
   toolColor.className = "circle";
   toolColor.style.backgroundColor = repo.languages.nodes[0] == undefined ? "#f1e05a" : repo.languages.nodes[0].color;
-  console.log(toolColor)
+
 
 
   var star = document.createElement("img")
