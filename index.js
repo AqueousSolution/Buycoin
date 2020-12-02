@@ -106,6 +106,10 @@ const addChildNode = (repo) => {
   var h2TextNode = document.createTextNode(repo.name);
   h2.appendChild(h2TextNode);
 
+  var repoLink = document.createElement("a");
+  repoLink.setAttribute("href", repo.url);
+  repoLink.className = "repo-link"
+
   var p = document.createElement("p");
   p.className = "repo-summary";
   var pTextNode = document.createTextNode(repo.description ?? "");
@@ -138,7 +142,8 @@ const addChildNode = (repo) => {
   btn.appendChild(star);
   btn.appendChild(btnTextNode);
 
-  left.appendChild(h2);
+  repoLink.appendChild(h2);
+  left.appendChild(repoLink);
   left.appendChild(p);
   left.appendChild(toolColor)
   left.appendChild(tool)

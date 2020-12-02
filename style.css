@@ -6,6 +6,139 @@
     sans-serif;
 }
 
+.card {
+  position: relative;
+
+  background-color: #fff;
+  border-radius: 6px;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+}
+
+.animatedBG {
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: #444d56;
+  background: -webkit-linear-gradient(
+    to right,
+    #586069 4%,
+    #444d56 25%,
+    #586069 36%
+  );
+  background: linear-gradient(to right, #586069 4%, #444d56 25%, #586069 36%);
+  -webkit-background-size: 1200px 100%;
+  background-size: 1200px 100%;
+}
+
+/* Animation of Shimmer Background */
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+.mask {
+  position: absolute;
+  background-color: #ffffff;
+}
+
+.topMask {
+  top: 0;
+  left: 14px;
+  height: 32px;
+  width: 100%;
+}
+
+.bottomMask {
+  bottom: 0;
+  left: 14px;
+  height: 32px;
+  width: 100%;
+}
+
+.leftMask {
+  padding-left: 4rem;
+  left: 14px;
+  width: 10px;
+  height: 100%;
+}
+
+.rightMask {
+  right: 0;
+  width: 80px;
+  height: 100%;
+}
+
+.horizontalLineMask1 {
+  left: 14px;
+  top: 59px;
+  height: 4px;
+  width: 100%;
+}
+
+.horizontalLineMask2 {
+  left: 14px;
+  top: 89px;
+  height: 4px;
+  width: 100%;
+}
+
+.verticalGapMask {
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 30rem;
+}
+
+.leftBlock2PaddingMask {
+  width: 20px;
+  height: 27px;
+  top: 62px;
+  left: 165px;
+}
+
+.leftBlock3PaddingMask {
+  width: 60px;
+  height: 27px;
+  top: 92px;
+  left: 125px;
+}
+
+.rightBlock1PaddingMask {
+  width: 24px;
+  height: 29px;
+  top: 31px;
+  right: 79px;
+}
+
+.rightBlock3PaddingMask {
+  width: 120px;
+  height: 29px;
+  top: 91px;
+  right: 79px;
+}
+
 .logo {
   height: 2rem;
 }
@@ -451,9 +584,10 @@ ul.left-nav__links {
   font-size: 1.2rem;
   color: #0366d6;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
-.repo-summary {
+.repo .repo-summary {
   font-size: 0.85rem;
   margin-bottom: 1rem;
 }

@@ -23,6 +23,7 @@ export const query = `
       nodes {
         name
         description
+        url
         updatedAt
         languages(first:1) {
           nodes{
